@@ -3,29 +3,31 @@ import 'package:islamic_app/core/constants/constant_paths.dart';
 import 'package:islamic_app/core/constants/constant_strings.dart';
 
 class CustomBackGround extends StatelessWidget {
-  const CustomBackGround({super.key});
+  final Widget body;
+  final Widget? bottomNavigationBar;
+  const CustomBackGround({
+    super.key,
+    required this.body,
+    this.bottomNavigationBar,
+  });
 
   @override
   Widget build(BuildContext context) {
-    Size size = MediaQuery.of(context).size;
-    print("width is : ${size.width}");
-    print("hight is : ${size.height}");
-    return Stack(
-      fit: StackFit.expand,
-      children: [
-        Image.asset(ConstantPaths.lightBackGroundImage, fit: BoxFit.cover),
-        Positioned(
-          top: size.height * 0.05,
-          child: SizedBox(
-            width: size.width,
-            child: Text(
-              ConstantStrings.islamiLabel,
-              textAlign: TextAlign.center,
-              style: Theme.of(context).textTheme.displayLarge,
-            ),
-          ),
+    return Container(
+      decoration: BoxDecoration(
+        image: DecorationImage(
+          fit: BoxFit.cover,
+          image: AssetImage(ConstantPaths.lightBackGroundImage),
         ),
-      ],
+      ),
+      child: Scaffold(
+        // to display body after app bar
+        extendBodyBehindAppBar: true,
+        // app bar using the default theme
+        appBar: AppBar(title: Text(ConstantStrings.islamiLabel)),
+        body: SafeArea(bottom: false, child: body),
+        bottomNavigationBar: bottomNavigationBar,
+      ),
     );
   }
 }

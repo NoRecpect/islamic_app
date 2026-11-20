@@ -6,4 +6,6 @@ class ConstantStrings {
   static const String radioLabel = "الراديو";
   static const String settingLabel = "الأعدادات";
   static const String islamiLabel = "إسلامي";
+  static const String ayatNumber = "عدد الآيات";
+  static const String suraName = "إسم السورة";
 }

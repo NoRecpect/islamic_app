@@ -12,4 +12,7 @@ class ConstantPaths {
   static const String radioIcon = "assets/icons/radio.png";
   static const String sebhaIcon = "assets/icons/sebha.png";
   static const String hadithIcon = "assets/icons/hadith.png";
+  static const String quranLightIcon = "assets/images/quran_light_icn.png";
+  static const quranLightPlayIcon = "assets/icons/q_l_play_icn.png";
+  static String suraPath(int suraId) => "assets/files/quran/$suraId.txt";
 }
