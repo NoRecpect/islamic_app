@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:islamic_app/view/screens/quran/data/quran_data.dart';
+import 'package:islamic_app/data/app_data.dart';
 import 'package:islamic_app/view/screens/quran/screens/sura_details_screen.dart';
 import 'package:islamic_app/view/screens/quran/widgets/custom_table_row.dart';
 
@@ -8,10 +8,11 @@ class SuraTableContent extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var theme = Theme.of(context);
     return ListView.builder(
-      itemCount: QuranData.allSuras.length,
+      itemCount: AppData.allSuras.length,
       itemBuilder: (context, index) {
-        final sura = QuranData.allSuras[index];
+        final sura = AppData.allSuras[index];
         return GestureDetector(
           onTap: () {
             Navigator.pushNamed(
@@ -23,6 +24,7 @@ class SuraTableContent extends StatelessWidget {
           child: CustomTableRow(
             rightText: sura.name,
             leftText: sura.versesCount.toString(),
+            style: theme.textTheme.displayMedium,
           ),
         );
       },

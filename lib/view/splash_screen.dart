@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:islamic_app/core/constants/constant_paths.dart';
+import 'package:islamic_app/core/constants/app_paths.dart';
 import 'package:islamic_app/view/screens/home_screen.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -29,7 +29,7 @@ class _SplashScreenState extends State<SplashScreen> {
       decoration: const BoxDecoration(
         image: DecorationImage(
           fit: BoxFit.cover,
-          image: AssetImage(ConstantPaths.lightSplashScreen),
+          image: AssetImage(AppPaths.lightSplashScreen),
         ),
       ),
     );

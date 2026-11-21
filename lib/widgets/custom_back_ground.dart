@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:islamic_app/core/constants/constant_paths.dart';
-import 'package:islamic_app/core/constants/constant_strings.dart';
+import 'package:islamic_app/core/constants/app_paths.dart';
+import 'package:islamic_app/core/constants/app_strings.dart';
 
 class CustomBackGround extends StatelessWidget {
   final Widget body;
@@ -17,14 +17,14 @@ class CustomBackGround extends StatelessWidget {
       decoration: BoxDecoration(
         image: DecorationImage(
           fit: BoxFit.cover,
-          image: AssetImage(ConstantPaths.lightBackGroundImage),
+          image: AssetImage(AppPaths.lightBackGroundImage),
         ),
       ),
       child: Scaffold(
         // to display body after app bar
         extendBodyBehindAppBar: true,
         // app bar using the default theme
-        appBar: AppBar(title: Text(ConstantStrings.islamiLabel)),
+        appBar: AppBar(title: Text(AppStrings.islamiLabel)),
         body: SafeArea(bottom: false, child: body),
         bottomNavigationBar: bottomNavigationBar,
       ),

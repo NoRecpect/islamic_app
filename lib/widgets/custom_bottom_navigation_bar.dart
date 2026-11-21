@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:islamic_app/core/constants/constant_paths.dart';
-import 'package:islamic_app/core/constants/constant_strings.dart';
+import 'package:islamic_app/core/constants/app_paths.dart';
+import 'package:islamic_app/core/constants/app_strings.dart';
 
 class CustomBottomNavigationBar extends StatelessWidget {
   final int currentIndex;
@@ -19,24 +19,24 @@ class CustomBottomNavigationBar extends StatelessWidget {
       onTap: onTap,
       items: [
         BottomNavigationBarItem(
-          label: ConstantStrings.quranLabel,
-          icon: ImageIcon(AssetImage(ConstantPaths.quranIcon)),
+          label: AppStrings.quranLabel,
+          icon: ImageIcon(AssetImage(AppPaths.quranIcon)),
         ),
         BottomNavigationBarItem(
-          label: ConstantStrings.sebhaLabel,
-          icon: ImageIcon(AssetImage(ConstantPaths.sebhaIcon)),
+          label: AppStrings.sebhaLabel,
+          icon: ImageIcon(AssetImage(AppPaths.sebhaIcon)),
         ),
         BottomNavigationBarItem(
-          label: ConstantStrings.hadithLabel,
-          icon: ImageIcon(AssetImage(ConstantPaths.hadithIcon)),
+          label: AppStrings.hadithLabel,
+          icon: ImageIcon(AssetImage(AppPaths.hadithIcon)),
         ),
         BottomNavigationBarItem(
-          label: ConstantStrings.radioLabel,
-          icon: ImageIcon(AssetImage(ConstantPaths.radioIcon)),
+          label: AppStrings.radioLabel,
+          icon: ImageIcon(AssetImage(AppPaths.radioIcon)),
         ),
         BottomNavigationBarItem(
-          label: ConstantStrings.settingLabel,
-          icon: ImageIcon(AssetImage(ConstantPaths.settingIcon)),
+          label: AppStrings.settingLabel,
+          icon: ImageIcon(AssetImage(AppPaths.settingIcon)),
         ),
       ],
     );

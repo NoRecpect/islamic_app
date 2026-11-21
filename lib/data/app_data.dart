@@ -1,8 +1,8 @@
 import 'package:flutter/services.dart';
-import 'package:islamic_app/core/constants/constant_paths.dart';
+import 'package:islamic_app/core/constants/app_paths.dart';
 import 'package:islamic_app/view/screens/quran/models/sura_model.dart';
 
-class QuranData {
+class AppData {
   static const List<Map<String, dynamic>> _surasList = [
     {"id": 1, "name": "الفاتحه", "versesCount": 7},
     {"id": 2, "name": "البقرة", "versesCount": 286},
@@ -119,6 +119,14 @@ class QuranData {
     {"id": 113, "name": "الفلق", "versesCount": 5},
     {"id": 114, "name": "الناس", "versesCount": 6},
   ];
+  static late List<String> _versesList;
+  static List<String> get versesList => _versesList;
+
+  static Future<List<String>> loadData(int suraId) async {
+    String suraContent = await rootBundle.loadString(AppPaths.suraPath(suraId));
+    _versesList = suraContent.trim().split("\n");
+    return versesList;
+  }
 
   static final List<SuraModel> allSuras = _surasList
       .map((e) => SuraModel.fromMap(e))

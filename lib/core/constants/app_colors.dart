@@ -1,13 +1,18 @@
 import 'package:flutter/material.dart';
 
-class ConstantColors {
+class AppColors {
+  AppColors._();
   //
-  static const Color transparentColor = Colors.transparent;
-  static const Color lightPrimaryColor = Color(0xffB7935F);
+  static const Color transparent = Colors.transparent;
+  static const Color primary = Color(0xffB7935F);
+  static const Color black = Colors.black;
+  static const Color white = Colors.white;
+
   // font colors section
-  static const Color lightPrimaryBlack = Colors.black;
-  static const Color darkThemeFontSecondaryColor = Color(0xffFACC1D);
-  static const Color darkThemeFontPrimaryColor = Colors.white;
+  static const Color textPrimary = Colors.black;
+  static const Color textDarkPrimary = Colors.white;
+  static const Color darkSecondary = Color(0xffFACC1D);
+  static const Color darkText = Colors.white;
   //
 
   // bottom navigation bar colors

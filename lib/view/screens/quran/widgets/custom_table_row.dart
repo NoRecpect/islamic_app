@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:islamic_app/core/constants/constant_colors.dart';
+import 'package:islamic_app/core/constants/app_colors.dart';
 
 class CustomTableRow extends StatelessWidget {
   final String rightText;
@@ -33,7 +33,7 @@ class CustomTableRow extends StatelessWidget {
           const VerticalDivider(
             thickness: 3,
             width: 3,
-            color: ConstantColors.lightPrimaryColor,
+            color: AppColors.primary,
           ),
           Expanded(
             child: Padding(

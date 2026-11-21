@@ -64,6 +64,7 @@ flutter:
     - assets/images/
     - assets/images/
     - assets/files/quran/
+    - assets/files/
     - assets/images/splash/dark/
     - assets/images/splash/light/
     - assets/images/back_ground/
@@ -92,7 +93,7 @@ flutter:
         - asset: assets/fonts/Inter_18pt-Regular.ttf
         - asset: assets/fonts/Inter_24pt-Regular.ttf
         - asset: assets/fonts/Inter_28pt-Regular.ttf
-          weight: 700
+          
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/to/font-from-package

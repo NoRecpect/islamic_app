@@ -1,4 +1,5 @@
-class ConstantPaths {
+class AppPaths {
+  AppPaths._();
   static const String lightSplashScreen =
       "assets/images/splash/light/light_splash_screen.png";
   static const String darkSplashScreen =
@@ -14,5 +15,8 @@ class ConstantPaths {
   static const String hadithIcon = "assets/icons/hadith.png";
   static const String quranLightIcon = "assets/images/quran_light_icn.png";
   static const quranLightPlayIcon = "assets/icons/q_l_play_icn.png";
+  static const hadithLogoLight = "assets/images/hadith_logo.png";
+  //sura_id
   static String suraPath(int suraId) => "assets/files/quran/$suraId.txt";
+  static String ahadithPath = "assets/files/ahadith.txt";
 }

@@ -11,10 +11,7 @@ class Verse extends StatelessWidget {
       padding: const EdgeInsets.symmetric(vertical: 6),
       child: Text(
         verse,
-        style: theme.textTheme.displaySmall!.copyWith(
-          fontSize: 30,
-          height: 1.5,
-        ),
+        style: theme.textTheme.bodyLarge,
         textAlign: TextAlign.center,
         textDirection: TextDirection.rtl,
       ),

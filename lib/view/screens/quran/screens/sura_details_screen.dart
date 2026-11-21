@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:islamic_app/core/constants/constant_colors.dart';
-import 'package:islamic_app/core/constants/constant_paths.dart';
+import 'package:islamic_app/core/constants/app_colors.dart';
+import 'package:islamic_app/core/constants/app_paths.dart';
 import 'package:islamic_app/view/screens/quran/models/sura_model.dart';
 import 'package:islamic_app/view/screens/quran/widgets/verse.dart';
 import 'package:islamic_app/widgets/custom_back_ground.dart';
@@ -22,9 +22,7 @@ class _SuraDetailsScreenState extends State<SuraDetailsScreen> {
   late SuraModel args;
 
   Future<void> _loadData(int suraId) async {
-    String suraContent = await rootBundle.loadString(
-      ConstantPaths.suraPath(suraId),
-    );
+    String suraContent = await rootBundle.loadString(AppPaths.suraPath(suraId));
     _versesList = suraContent.trim().split("\n");
     setState(() {});
   }
@@ -48,28 +46,20 @@ class _SuraDetailsScreenState extends State<SuraDetailsScreen> {
         child: Column(
           children: [
             Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text("سورة ${args.name}", style: theme.textTheme.displayMedium),
-                ImageIcon(
-                  AssetImage(ConstantPaths.quranLightPlayIcon),
-                  size: 25,
-                ),
+                Text("سورة ${args.name}", style: theme.textTheme.titleLarge),
+                SizedBox(width: 20),
+                ImageIcon(AssetImage(AppPaths.quranLightPlayIcon), size: 25),
               ],
             ),
             const SizedBox(height: 5),
-            const Divider(
-              color: ConstantColors.lightPrimaryColor,
-              thickness: 2,
-              height: 2,
-            ),
+            const Divider(color: AppColors.primary, thickness: 2, height: 2),
             const SizedBox(height: 5),
             if (_versesList.isEmpty)
               Expanded(
                 child: Center(
-                  child: CircularProgressIndicator(
-                    color: ConstantColors.lightPrimaryColor,
-                  ),
+                  child: CircularProgressIndicator(color: AppColors.primary),
                 ),
               )
             else
